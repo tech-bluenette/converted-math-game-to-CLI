@@ -1,4 +1,4 @@
-
+var prompt = require('sync-prompt').prompt;
 var PLAYER_1 = 0;
 var PLAYER_2 = 1;
 var PLAYER_1_NAME = prompt("Enter your name:");
@@ -82,10 +82,10 @@ function gameLoop () {
     var answer = promptUser(); 
 
     if ( correct( answer ) ) {
-      alert("You're awesome!");
+      console.log("You're awesome!");
     } else {
       loseLife(turn);
-      alert("You dissapoint me. " );
+      console.log("You dissapoint me. " );
     }
 
     changeTurn();
@@ -101,5 +101,4 @@ function gameLoop () {
   }
 }
 
-
-window.onload = function () { gameLoop(); };
+gameLoop();
